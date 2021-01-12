@@ -1,9 +1,6 @@
 package com.webapi.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +11,8 @@ import com.webapi.exception.ResourseNotFoundException;
 import com.webapi.model.Employees;
 import com.webapi.repository.EmployeesRepo;
 
+import org.springframework.data.domain.Sort;
+
 @RestController
 @RequestMapping("/api/")
 public class EmployeesController {
@@ -23,7 +22,7 @@ public class EmployeesController {
 	@GetMapping("employees/fetch")
 	public List<Employees> getAllEmployees() {
 		System.out.println("List of All Emp:" + this.empRepo.findAll());
-		return this.empRepo.findAll();
+		return this.empRepo.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
 	
 	@GetMapping("employees/{id}")
