@@ -50,6 +50,9 @@ public class EmployeesController {
 		employee.setName(employeesDetail.getName());
 		employee.setSalary(employeesDetail.getSalary());
 		employee.setAge(employeesDetail.getAge());
+		employee.setMobile(employeesDetail.getMobile());
+		employee.setEmail(employeesDetail.getEmail());
+		employee.setAddress(employeesDetail.getAddress());
 		
 		return ResponseEntity.ok(this.empRepo.save(employee));
 	}
