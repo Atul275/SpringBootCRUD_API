@@ -15,6 +15,9 @@ public class Employees {
 	private String name;
 	private int salary;
 	private int age;
+	private String email;
+	private String address;
+	private String mobile;
 	
 	public Employees() {
 		super();
@@ -51,9 +54,32 @@ public class Employees {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Employees [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + "]";
+		return "Employees [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + ", email=" + email
+				+ ", address=" + address + ", mobile=" + mobile + "]";
 	}
 }
