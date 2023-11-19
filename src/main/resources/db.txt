@@ -1,0 +1,15 @@
+
+-- Drop table
+
+-- DROP TABLE public.employees;
+
+CREATE TABLE public.employees (
+	id int4 NULL,
+	name text NULL,
+	salary int4 NULL,
+	age int4 NULL,
+	gender_id numeric NULL,
+	mobile text NULL,
+	email text NULL,
+	address text NULL
+);
