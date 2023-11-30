@@ -13,21 +13,26 @@ public class Employees {
 //	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private int salary;
+	private long salary;
 	private int age;
 	private String email;
 	private String address;
 	private String mobile;
+	private String gender;
 	
 	public Employees() {
 		super();
 	}
 	
-	public Employees(String name, int salary, int age) {
+	public Employees(String name, long salary, int age, String moblie, String email, String address) {
 		super();
 		this.name = name;
 		this.salary = salary;
 		this.age = age;
+		this.mobile= moblie;
+		this.email= email;
+		this.address= address;
+		this.gender= gender;
 	}
 
 	public int getId() {
@@ -42,10 +47,10 @@ public class Employees {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getSalary() {
+	public long getSalary() {
 		return salary;
 	}
-	public void setSalary(int salary) {
+	public void setSalary(long salary) {
 		this.salary = salary;
 	}
 	public int getAge() {
@@ -76,10 +81,18 @@ public class Employees {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public String getGender() {
+		return gender;
+	}
 
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
 	@Override
 	public String toString() {
 		return "Employees [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + ", email=" + email
-				+ ", address=" + address + ", mobile=" + mobile + "]";
+				+ ", address=" + address + ", mobile=" + mobile + ", gender=" + gender + "]";
 	}
 }

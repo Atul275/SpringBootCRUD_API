@@ -34,6 +34,11 @@ public class EmployeesController {
 		return ResponseEntity.ok().body(employees);
 	}
 	
+	@GetMapping("employees/maxid")
+	public Employees getMaxEmployees() {
+		return this.empRepo.findTopByOrderByIdDesc().orElse(null);
+	}
+	
 	@PostMapping("employees/add")
 	public Employees addEmployees(@RequestBody Employees employees) {
 		empRepo.save(employees);
@@ -53,6 +58,7 @@ public class EmployeesController {
 		employee.setMobile(employeesDetail.getMobile());
 		employee.setEmail(employeesDetail.getEmail());
 		employee.setAddress(employeesDetail.getAddress());
+		employee.setGender(employeesDetail.getGender());
 		
 		return ResponseEntity.ok(this.empRepo.save(employee));
 	}
