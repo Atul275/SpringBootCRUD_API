@@ -1,8 +1,6 @@
 package com.webapi.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -24,7 +22,7 @@ public class Employees {
 		super();
 	}
 	
-	public Employees(String name, long salary, int age, String moblie, String email, String address) {
+	public Employees(String name, long salary, int age, String moblie, String email, String address, String gender) {
 		super();
 		this.name = name;
 		this.salary = salary;

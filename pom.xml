@@ -40,6 +40,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- QR Code Generate dependency -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+		    <artifactId>core</artifactId>
+		    <version>3.4.0</version>
+		</dependency>
+		<!-- Java Client dependency -->
+		<dependency>
+		    <groupId>com.google.zxing</groupId>
+		    <artifactId>javase</artifactId>
+		    <version>3.4.0</version>
+		</dependency>
+		<!-- Excel file jar dependency -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
