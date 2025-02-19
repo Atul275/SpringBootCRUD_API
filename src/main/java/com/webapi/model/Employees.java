@@ -1,6 +1,7 @@
 package com.webapi.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,7 +9,7 @@ import javax.persistence.Table;
 @Table(name="employees")
 public class Employees {
 	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	private int id;
 	private String name;
 	private long salary;

@@ -17,11 +17,11 @@ import com.webapi.repository.EmployeesRepo;
 public class ExcelService {
 	@Autowired
 	private EmployeesRepo empRepo;
-	
-	public ByteArrayInputStream loadAllData() throws IOException {
-	    List<Employees> emp = empRepo.findAll(Sort.by(Sort.Direction.ASC, "id"));
 
-	    ByteArrayInputStream in = ExcelHelper.databaseToExcel(emp);
-	    return in;
-	  }
+	public ByteArrayInputStream loadAllData() throws IOException {
+		List<Employees> emp = empRepo.findAll(Sort.by(Sort.Direction.ASC, "id"));
+
+		ByteArrayInputStream in = ExcelHelper.databaseToExcel(emp);
+		return in;
+	}
 }

@@ -13,3 +13,9 @@ CREATE TABLE public.employees (
 	email text NULL,
 	address text NULL
 );
+
+
+-- DROP TABLE public.login;
+
+create table login(id SERIAL , userName text primary key, password text not null, firstName text,
+   lastName text, mobile text, email text unique, country text, sques text, ans text);
